@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -16,6 +18,7 @@ public class StudentFeePayment {
 
     @ManyToOne
     @JoinColumn(name = "student_fee_id")
+    @JsonBackReference
     private FeeStructure studentFee;
 
     private double amountPaid;

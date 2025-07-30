@@ -5,6 +5,7 @@ import lombok.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.scm.model.enums.FeeStatus;
 import com.scm.model.enums.RefundStatus;
 
@@ -43,6 +44,7 @@ public class FeeStructure {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "studentFee", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<StudentFeePayment> payments = new ArrayList<>();
 
     @PreUpdate

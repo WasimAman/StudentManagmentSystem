@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.scm.model.Course;
-import com.scm.service.CourseService;
+import com.scm.service.admin.CourseService;
 
 @RestController
 @RequestMapping("/api/courses/")

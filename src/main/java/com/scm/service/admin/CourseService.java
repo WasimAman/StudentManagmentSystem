@@ -1,4 +1,4 @@
-package com.scm.service;
+package com.scm.service.admin;
 
 import com.scm.model.Course;
 

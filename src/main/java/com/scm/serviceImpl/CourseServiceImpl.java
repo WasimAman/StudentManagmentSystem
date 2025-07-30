@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.scm.exceptions.CourseException;
 import com.scm.model.Course;
 import com.scm.repository.CourseRepository;
-import com.scm.service.CourseService;
+import com.scm.service.admin.CourseService;
 
 @Service
 public class CourseServiceImpl implements CourseService {
