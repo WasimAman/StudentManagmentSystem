@@ -39,7 +39,12 @@ public class FeeServiceImpl implements FeeService{
             feeStructure.setDueAmount(0);
         }
 
-        feeStructure.setStatus(FeeStatus.PARTIAL);
+        if(feeStructure.getDueAmount() == 0){
+            feeStructure.setStatus(FeeStatus.PAID);
+        }else{
+            feeStructure.setStatus(FeeStatus.PARTIAL);
+        }
+
         feeStructure.getPayments().add(feePayment);
         feePayment.setStudentFee(feeStructure);
 

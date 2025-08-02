@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.scm.model.FeeStructure;
+import com.scm.model.enums.RefundStatus;
 
 @Repository
 public interface StudentFeeStructureRepository extends JpaRepository<FeeStructure,Long>{
@@ -19,4 +20,6 @@ public interface StudentFeeStructureRepository extends JpaRepository<FeeStructur
         @Param("studentId") String studentId,
         @Param("year") int year
     );
+
+    List<FeeStructure> findByRefundStatus(RefundStatus status);
 }
