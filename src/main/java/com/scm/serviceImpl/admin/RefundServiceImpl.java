@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.scm.model.FeeStructure;
-import com.scm.model.Student;
 import com.scm.model.enums.RefundStatus;
 import com.scm.repository.student.StudentFeeStructureRepository;
 import com.scm.service.Student.StudentFeeStructureService;
