@@ -3,11 +3,13 @@ package com.scm.serviceImpl.admin;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.scm.model.Student;
 import com.scm.repository.student.StudentRepository;
 import com.scm.service.admin.PromotionService;
 
+@Service
 public class PromotionServiceImpl implements PromotionService{
     @Autowired
     private StudentRepository studentRepository;

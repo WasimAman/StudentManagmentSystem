@@ -30,7 +30,7 @@ public class FeeServiceImpl implements FeeService{
 
         List<FeeStructure> studentFeeStructures = feeStructureService.getStudentFeeStructure(studentID);
 
-        FeeStructure feeStructure = studentFeeStructures.get(studentFeeStructures.size()-1);
+        FeeStructure feeStructure = studentFeeStructures.getLast();
         feeStructure.setPaidAmount(feeStructure.getPaidAmount()+feePayment.getAmountPaid());
 
         feeStructure.setDueAmount(feeStructure.getDueAmount()-feePayment.getAmountPaid());
@@ -52,5 +52,5 @@ public class FeeServiceImpl implements FeeService{
         // feePaymentRepository.save(feePayment);
         return "Fee Added...";
     }
-    
+
 }

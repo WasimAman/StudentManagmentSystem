@@ -21,7 +21,7 @@ public class StudentRefundServiceImpl implements StudentRefundService{
         FeeStructure currentYearFeeStructure = feeStructureService.getFeeStructureByYear(student.getCurrentYear(), studentId);
         currentYearFeeStructure.setRefundStatus(RefundStatus.REQUESTED);
         feeStructureRepository.save(currentYearFeeStructure);
-        return "Refund Requested Successfullly...";
+        return "Refund Requested Successfully...";
     }
 
     @Override
@@ -37,6 +37,6 @@ public class StudentRefundServiceImpl implements StudentRefundService{
         FeeStructure currentYearFeeStructure = feeStructureService.getFeeStructureByYear(student.getCurrentYear(), studentId);
         currentYearFeeStructure.setRefundStatus(RefundStatus.CANCELLED);
         feeStructureRepository.save(currentYearFeeStructure);
-        return "Refund Cancled Successfullly...";
+        return "Refund Canceled Successfully...";
     }
 }

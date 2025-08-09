@@ -1,4 +1,4 @@
-package com.scm.serviceImpl;
+package com.scm.serviceImpl.admin;
 
 import java.util.Optional;
 
