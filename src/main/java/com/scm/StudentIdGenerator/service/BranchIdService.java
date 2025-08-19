@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Service
 public class BranchIdService {
-
+    
     private static final String BASE_PREFIX = "22TP1";
     private static final String BASE_SUFFIX = "05";
 
