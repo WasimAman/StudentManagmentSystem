@@ -34,6 +34,9 @@ public class FeeController {
     public ResponseEntity<FeeStructure> studentFeeStructurePerYear(
             @RequestHeader(JwtConstant.HEADER) String token,
             @PathVariable int year) {
+
+        System.out.println(year);
+        System.out.println(token)
         String studentId = studentService.getStudentIdByToken(token);
         FeeStructure feeStructureByYear = feeStructureService.getFeeStructureByYear(year, studentId);
         return ResponseEntity.status(HttpStatus.OK).body(feeStructureByYear);
